@@ -48,13 +48,13 @@ automatically fetch the appropriate binary for your platform.
 To install it, add it to your application's Gemfile:
 
 ```ruby
-gem 'thruster'
+gem 'neo-thruster'
 ```
 
 Or install it globally:
 
 ```sh
-$ gem install thruster
+$ gem install neo-thruster
 ```
 
 
