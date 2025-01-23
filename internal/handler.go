@@ -23,6 +23,9 @@ func NewHandler(options HandlerOptions) http.Handler {
 	handler = NewCacheHandler(options.cache, options.maxCacheableResponseBody, handler)
 	handler = NewSendfileHandler(options.xSendfileEnabled, handler)
 	handler = ZstdHandler(handler)
+
+	// GZip handler will ignore compressed responses like brotli and zstd
+	// If the browser or client does not support any modern compression algorithm, it will fallback to gzip
 	handler = gzhttp.GzipHandler(handler)
 
 	if options.maxRequestBody > 0 {
