@@ -22,6 +22,7 @@ func NewHandler(options HandlerOptions) http.Handler {
 	handler := NewProxyHandler(options.targetUrl, options.badGatewayPage, options.forwardHeaders)
 	handler = NewCacheHandler(options.cache, options.maxCacheableResponseBody, handler)
 	handler = NewSendfileHandler(options.xSendfileEnabled, handler)
+	handler = ZstdHandler(handler)
 	handler = gzhttp.GzipHandler(handler)
 
 	if options.maxRequestBody > 0 {
