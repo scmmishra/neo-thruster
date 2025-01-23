@@ -1,3 +1,11 @@
+# About this fork
+
+This is a fork of the original [thruster](https://github.com/basecamp/thruster)
+proxy by the folks at Basecamp. The primary motivation to do this was to add
+support for ZSTD compression, at the moment only GZip is supported.
+
+The original README is below.
+
 # Thruster
 
 Thruster is an HTTP/2 proxy for simple production-ready deployments of Rails

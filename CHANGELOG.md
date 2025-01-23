@@ -1,3 +1,9 @@
+## v0.1.0 / 2025-01-24
+
+* Add support for zstd compression
+
+<!-- Forked here on 23 Jan 2025 -->
+
 ## v0.1.10 / 2025-01-06
 
 * Avoid runtime glibc dependency in dist builds
